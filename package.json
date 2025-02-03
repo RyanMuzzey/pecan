@@ -1,0 +1,23 @@
+{
+  "name": "pecan",
+  "version": "1.0.0",
+  "description": "A species of hickory native to the Southern United States. They are small, crunchy, and sweet when cooked. This is my playground for NodeJs tree-shaking.",
+  "main": "dist/index.mjs",
+  "scripts": {
+    "test": "jest --collect-coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanMuzzey/pecan.git"
+  },
+  "keywords": [
+    "node",
+    "tree-shaking"
+  ],
+  "author": "Ryan Muzzey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RyanMuzzey/pecan/issues"
+  },
+  "homepage": "https://github.com/RyanMuzzey/pecan#readme"
+}
