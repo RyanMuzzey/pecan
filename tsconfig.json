@@ -1,0 +1,17 @@
+{
+  "extends": "@tsconfig/node23/tsconfig.json",
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "outDir": "dist"
+  },
+  "exclude": [
+    "tests/**/*"
+  ],
+  "include": [
+    "src/**/*"
+  ]
+}

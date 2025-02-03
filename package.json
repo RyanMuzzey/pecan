@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "A species of hickory native to the Southern United States. They are small, crunchy, and sweet when cooked. This is my playground for NodeJs tree-shaking.",
   "main": "dist/index.mjs",
+  "type": "module",
   "scripts": {
-    "test": "jest --collect-coverage"
+    "build": "tsc",
+    "prepare": "husky install",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,5 +22,24 @@
   "bugs": {
     "url": "https://github.com/RyanMuzzey/pecan/issues"
   },
-  "homepage": "https://github.com/RyanMuzzey/pecan#readme"
+  "homepage": "https://github.com/RyanMuzzey/pecan#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@tsconfig/node23": "^23.0.0",
+    "@types/jest": "^29.5.14",
+    "eslint": "^9.19.0",
+    "globals": "^15.14.0",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.4.3",
+    "prettier": "3.4.2",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.22.0"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix",
+    "*.{ts,md}": "prettier --write"
+  }
 }
