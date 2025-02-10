@@ -2,11 +2,14 @@
   "name": "pecan",
   "version": "1.0.0",
   "description": "A species of hickory native to the Southern United States. They are small, crunchy, and sweet when cooked. This is my playground for NodeJs tree-shaking.",
-  "main": "dist/index.mjs",
+  "main": "dist/app.mjs",
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "npm run build:esbuild && npm run package",
+    "build:esbuild": "node build.mjs",
+    "package": "cp package*.json dist && cd dist && npm ci --production",
     "prepare": "husky install",
+    "start": "node -e \"require('./dist/app.mjs').hello()\"",
     "test": "jest"
   },
   "repository": {
@@ -27,6 +30,7 @@
     "@eslint/js": "^9.19.0",
     "@tsconfig/node23": "^23.0.0",
     "@types/jest": "^29.5.14",
+    "esbuild": "^0.25.0",
     "eslint": "^9.19.0",
     "globals": "^15.14.0",
     "husky": "^9.1.7",
@@ -41,5 +45,8 @@
   "lint-staged": {
     "*.ts": "eslint --cache --fix",
     "*.{ts,md}": "prettier --write"
+  },
+  "dependencies": {
+    "axios": "^1.7.9"
   }
 }
